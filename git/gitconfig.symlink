@@ -1,9 +1,9 @@
 # gitconfig
 [user]
-    name = Nick Nisi
-    email = nick@nisi.org
+    name = Dan Thurman
+    email = dthurman@salesforce.com
 [github]
-    user = nicknisi
+    user = dthurman
 [init]
     templatedir = ~/.dotfiles/git/templates
 [alias]

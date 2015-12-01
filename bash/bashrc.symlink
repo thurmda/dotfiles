@@ -1,0 +1,34 @@
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+if [ -f $HOME/.bashrc-local ]; then
+        . $HOME/.bashrc-local
+fi
+
+
+
+# User specific aliases and functions
+alias ll="ls -lGhA"
+alias l='ls -lhGg'
+alias gs='git status'
+alias g='grep --color=tty -i -P'
+alias gr='grep -R --color=tty -i -P -n --exclude=*.{jpg,png,gif}'
+alias chrome='open -a Google\ Chrome '
+alias cudabox='ssh dv2024s.dev.ca1.sfmc.co'
+
+#env
+export TERM=xterm-256color
+export EDITOR=vim
+export GHTOKEN=d8f09417df5eb31fc30ca3be9595f8f65a336702
+	PATH="$HOME/.bin:$PATH"
+	PATH="./node/bin:$PATH"
+	PATH="$HOME/.dotfiles/bin:$PATH"
+	PATH="./node_modules/.bin:$PATH"
+export PATH
+
+#scripts
+	[[ -s ~/.dotfiles/bin/git-completion.bash ]] && . ~/.dotfiles/bin/git-completion.bash #git completion
+	[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
+	
+

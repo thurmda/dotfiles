@@ -466,3 +466,6 @@ if (has("gui_running"))
 endif
 
 call ApplyLocalSettings(expand('.'))
+
+"Powerline
+set runtimepath+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/
