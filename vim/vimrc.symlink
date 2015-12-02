@@ -11,6 +11,7 @@ abbr teh the
 abbr tempalte template
 abbr fitler filter
 
+
 set nocompatible " not compatible with vi
 set autoread " detect when a file is changed
 
@@ -20,6 +21,7 @@ set backspace=indent,eol,start
 " set a map leader for more key combos
 let mapleader = ','
 let g:mapleader = ','
+
 
 set history=1000 " change history to 1000
 set textwidth=120
@@ -32,7 +34,6 @@ set softtabstop=4 " edit as if the tabs are 4 characters wide
 set shiftwidth=4 " number of spaces to use for indent and unindent
 set shiftround " round indent to a multiple of 'shiftwidth'
 set completeopt+=longest
-
 if has('mouse')
     set mouse=a
     set ttymouse=xterm2
@@ -169,6 +170,11 @@ set laststatus=2 " show the satus line all the time
 
 " Close the current buffer
 " noremap <C-x> :q<cr>
+
+
+map <s-left> : tabprevious<CR>
+map <s-right> : tabnext<CR>
+
 
 " remap esc
 inoremap jk <esc>
@@ -396,7 +402,7 @@ let g:NERDTreeQuitOnOpen=0
 " show hidden files in NERDTree
 let NERDTreeShowHidden=1
 " remove some files by extension
-let NERDTreeIgnore = ['\.js.map$']
+let NERDTreeIgnore = ['\.js.map$','.localized']
 " Toggle NERDTree
 nmap <silent> <leader>k :NERDTreeToggle<cr>
 " expand to the path of the file in the current buffer
@@ -445,9 +451,9 @@ let g:ctrlp_working_path_mode = 2
 
 " airline options
 let g:airline_powerline_fonts=1
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_theme='base16'
+"let g:airline_left_sep=''
+"let g:airline_right_sep=''
+let g:airline_theme='molokai'
 
 " don't hide quotes in json files
 let g:vim_json_syntax_conceal = 0
@@ -467,5 +473,59 @@ endif
 
 call ApplyLocalSettings(expand('.'))
 
+
+"MINE MINE MINE
+
+let g:pasta_enabled_filetypes = ['ruby', 'javascript', 'css', 'sh']
+
 "Powerline
 set runtimepath+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/
+let g:startify_custom_header=[
+\ '                                                                 -s/:                                                ',
+\ '                                                               -shs/so-                                              ',
+\ '                           -hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-  :s///:+so-      :yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyho     ',
+\ '                           hyddddddddddddddddddddddddddddddo+  `///////+so-    mydddddddddddddddddddddddddddddy+-    ',
+\ '                           hyddddddddddddddddddddddddddddddo+  `/////////+s+   Nsdddddddddddddddddddddddddddddy+-    ',
+\ '                           ydyhhhyhddddddddddddddddddyyyyyy+/  `///////////+   mhyyyyyhdddddddddddddddddddddhs+o-    ',
+\ '                           `+-::/hsdddddddddddddddddy+o+:::-` `-///////////:.  .+:::ohyddddddddddddddddddddsoo/.     ',
+\ '                                -Mydddddddddddddddddy+o+   ``.://////////////:`   -yNNyddddddddddddddddddyoo/.       ',
+\ '                                -Mydddddddddddddddddy+o+   ::///////////////:-` -sNNdhdddddddddddddddddyoo/.         ',
+\ '                                -Mydddddddddddddddddy+o+   ///////////////:-` .sNNdhdddddddddddddddddyoo+.           ',
+\ '                                -Mydddddddddddddddddy+o+   /////////////:-` .sNNdhdddddddddddddddddyoo+-             ',
+\ '                                -Mydddddddddddddddddy+o+   ///////////:-` .sNNdhdddddddddddddddddho++-`              ',
+\ '                                -Mydddddddddddddddddy+o+   /////////:-` .sNNmhdddddddddddddddddho++-`                ',
+\ '                                -Mydddddddddddddddddy+o+   ///////:-` .omNmhdddddddddddddddddho++:`                  ',
+\ '                                -Mydddddddddddddddddy+o+   /////:-` .omMmhdddddddddddddddddhs++:`                    ',
+\ '                                -Mydddddddddddddddddy+o+   ///:-` .omMmhdddddddddddddddddhs++:` `:`                  ',
+\ '                                -Mydddddddddddddddddy+o+   /:-` `omMmhhddddddddddddddddds++:` `./os/`                ',
+\ '                                -Mydddddddddddddddddy+o+   -` `omMmhhdddddddddddddddddyo+/`  .://:/os/`              ',
+\ '                                -Mydddddddddddddddddy+o+    `+mMNhhdddddddddddddddddyo+/.  .://////:/os/`            ',
+\ '                           `:+  -Mydddddddddddddddddy+o+  `+mMNhhdddddddddddddddddyo+/.  .://////////:/ss/`          ',
+\ '                          :yh+  -Mydddddddddddddddddy+o+`+mMNhhdddddddddddddddddyo++.  .://////////////:+ss:`        ',
+\ '                        :yhs/-  -Mydddddddddddddddddy+o+mMNdhdddddddddddddddddho++.  `://////////////////:+ss:`      ',
+\ '                      :yhs///-  -Mydddddddddddddddddy++mNdhdddddddddddddddddho++-  `://////////////////////:+ss:`    ',
+\ '                     /o+:////-  -Mydddddddddddddddddy+hdhdddddddddddddddddho++-  `-//////////////////////////://:    ',
+\ '                      .---://-  -Mydddddddddddddddddy+hddddddddddddddddddo++-  `-//////////////////////////:-..`     ',
+\ '                        .---:-  -Mydddddddddddddddddddddddddddddddddddho++-  `-//////////////////////////:-..`       ',
+\ '                          .--.  -Myddddddddddddddddddddddddddddddddo--:::-  -://///////////////////////:-..`         ',
+\ '                            ..  -Mydddddddddddddddddddddddddddddddo`sddddy -/////////////////////////:-..`           ',
+\ '                                -Mydddddddddddddddddddddddddddddds`+ddddd:`:///////////////////////:-..`             ',
+\ '                                -Myddddddddddddddddddddddddddddy+/ :oooo:`-//////////////////////:-..`               ',
+\ '                                -Myddddddddddddddddddddddddddyo+/`  .----://///////////////////:-..`                 ',
+\ '                                -Myddddddddddddddddddddddddy+--.   `....:/:........-:///:........`                   ',
+\ '                                -Myddddddddddddddddddddddho+..ssyyyyyyo -/`.ssyyyyy/`.-.`/yyyyy:`   .oyyyyyo.        ',
+\ '                                -Myddddddddddddddddddddho+/. `..hddddd..//.`.sddddddysssydddddddyssshddddddd/        ',
+\ '                                -Myddddddddddddddddddhs+/.  `- +ddddd/ ://:`-ddddhyyyyyyydddddhyyyyyyydddddh`        ',
+\ '                                -Myddddddddddddddddhs+/-  `-:`-ddddds -///-`ydddd:.--..`.ddddd:``````:ddddd:         ',
+\ '                                -Myddddddddddddddhs++-` `-:/-`yddddh..///: +dddds -::-. odddds      `hdddds          ',
+\ '                                -Mydddddddddddddyo+-` `-://: +ddddd/`:///`-ddddh..:-.. -ddddd.      +ddddd.          ',
+\ '                                -Mydddddddddddyo+:` `.:///:`-ddddds -///-`ydddd/ ...` `ydddd+      .ddddd+           ',
+\ '                                -Mydddddddddyo+:`   .---:/.`hddddh..///: +ddddy `.`   /ddddy`      sddddh`           ',
+\ '                                -Mydddddddyo+:`      `---- oddddd/ .://`-ddddd- `    .ddddd-      :ddddd:            ',
+\ '                                `yhossssso+/`          `-`-hhhhhhoo`./- shhhhho`     ohhhhh+`    `yhhhhho:           ',
+\ '                                  .`......`               `.-..----`:/-`...````      ```````      ```````            ',
+\ '                                                           `----://///:-..`                                          ',
+\ '                                                             `----:/:-..`                                            ',
+\ '                                                               `----..`                                              ',
+\ '                                                                 `-``                                                ',
+\ '                                                                                                                     ']
