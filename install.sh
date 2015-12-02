@@ -2,8 +2,8 @@
 
 echo "Installing dotfiles"
 
-#echo "Initializing submodule(s)"
-#git submodule update --init --recursive
+echo "Initializing submodule(s)"
+git submodule update --init --recursive
 
 source install/link.sh
 
@@ -16,15 +16,15 @@ if [ "$(uname)" == "Darwin" ]; then
     echo "Updating OSX settings"
     source installosx.sh
 
-    echo "Installing node (from nvm)"
-    source install/nvm.sh
+    #echo "Installing node (from nvm)"
+    #source install/nvm.sh
 
-    echo "Configuring nginx"
-    # create a backup of the original nginx.conf
-    mv /usr/local/etc/nginx/nginx.conf /usr/local/etc/nginx/nginx.original
-    ln -s ~/.dotfiles/nginx/nginx.conf /usr/local/etc/nginx/nginx.conf
-    # symlink the code.dev from dotfiles
-    ln -s ~/.dotfiles/nginx/code.dev /usr/local/etc/nginx/sites-enabled/code.dev
+    #echo "Configuring nginx"
+    ## create a backup of the original nginx.conf
+    #mv /usr/local/etc/nginx/nginx.conf /usr/local/etc/nginx/nginx.original
+    #ln -s ~/.dotfiles/nginx/nginx.conf /usr/local/etc/nginx/nginx.conf
+    ## symlink the code.dev from dotfiles
+    #ln -s ~/.dotfiles/nginx/code.dev /usr/local/etc/nginx/sites-enabled/code.dev
 fi
 
 echo "creating vim directories"
