@@ -9,8 +9,8 @@ fi
 
 
 # User specific aliases and functions
-alias ll="ls -lGhA"
-alias l='ls -lhGg'
+alias ll="ls -lGhA --color"
+alias l='ls -lhGg --color'
 alias gs='git status'
 alias g='grep --color=tty -i -P'
 alias gr='grep -R --color=tty -i -P -n --exclude=*.{jpg,png,gif}'
@@ -32,3 +32,10 @@ export PATH
 	[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 	
 
+DOTFILES="$HOME/.dotfiles"
+THEME="base16-monokai"
+BACKGROUND="dark"
+
+BASE16_SHELL="$DOTFILES/.config/base16-shell/$THEME.$BACKGROUND.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+echo $BASE16_SHELL
