@@ -7,7 +7,7 @@ call plug#begin('~/.vim/plugged')
 " colorschemes
 Plug 'chriskempson/base16-vim'
 Plug 'mhinz/vim-startify'
-
+Plug 'rking/ag.vim'
 "Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
@@ -20,7 +20,7 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'tpope/vim-surround'
 "Plug 'benmills/vimux'
 Plug 'bling/vim-airline'
-"Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 " Plug 'benekastah/neomake'
 "Plug 'tpope/vim-fugitive'
 "Plug 'tpope/vim-repeat'
