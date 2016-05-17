@@ -529,3 +529,6 @@ let g:startify_custom_header=[
 \ '                                                               `----..`                                              ',
 \ '                                                                 `-``                                                ',
 \ '                                                                                                                     ']
+
+
+let g:vebugger_leader='<Leader>d'
