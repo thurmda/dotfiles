@@ -477,7 +477,7 @@ call ApplyLocalSettings(expand('.'))
 "MINE MINE MINE
 
 let g:pasta_enabled_filetypes = ['ruby', 'javascript', 'css', 'sh']
-
+map <leader>m :call JsBeautify()<cr>
 "Powerline
 set runtimepath+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/
 let g:startify_custom_header=[

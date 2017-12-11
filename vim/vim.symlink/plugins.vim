@@ -7,7 +7,8 @@ call plug#begin('~/.vim/plugged')
 " colorschemes
 Plug 'chriskempson/base16-vim'
 Plug 'mhinz/vim-startify'
-Plug 'kien/ctrlp.vim'
+
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
 "Plug 'mileszs/ack.vim'
@@ -19,9 +20,9 @@ Plug 'scrooloose/nerdcommenter'
 "Plug 'tpope/vim-surround'
 "Plug 'benmills/vimux'
 Plug 'bling/vim-airline'
-Plug 'scrooloose/syntastic'
-"Plug 'benekastah/neomake'
-Plug 'tpope/vim-fugitive'
+"Plug 'scrooloose/syntastic'
+" Plug 'benekastah/neomake'
+"Plug 'tpope/vim-fugitive'
 "Plug 'tpope/vim-repeat'
 "Plug 'garbas/vim-snipmate'
 "Plug 'editorconfig/editorconfig-vim'
@@ -35,7 +36,7 @@ Plug 'tpope/vim-fugitive'
 " Plug 'tpope/vim-abolish'
 "Plug 'AndrewRadev/splitjoin.vim'
 "Plug 'vim-scripts/matchit.zip'
-Plug 'tpope/vim-sleuth' " detect indent style (tabs vs. spaces)
+"Plug 'tpope/vim-sleuth' " detect indent style (tabs vs. spaces)
 Plug 'sickill/vim-pasta' " context-aware pasting
 "Plug 'junegunn/goyo.vim', { 'on': 'Goyo' } " distraction-free writing
 "Plug 'junegunn/limelight.vim', { 'on': 'Limelight' } " focus tool. Good for presentating with vim
@@ -66,6 +67,10 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 "Plug 'timcharper/textile.vim', { 'for': 'textile' }
 " Plug 'tclem/vim-arduino'
 " Plug 'davidoc/taskpaper.vim'
-
+Plug 'rking/ag.vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/vimproc.vim'
+Plug 'idanarye/vim-vebugger'
+Plug 'maksimr/vim-jsbeautify'
 call plug#end()
 filetype plugin indent on
