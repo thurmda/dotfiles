@@ -6,8 +6,7 @@ call plug#begin('~/.vim/plugged')
 "
 " colorschemes
 Plug 'chriskempson/base16-vim'
-Plug 'mhinz/vim-startify'
-
+"Plug 'mhinz/vim-startify'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdcommenter'
@@ -47,7 +46,7 @@ Plug 'sickill/vim-pasta' " context-aware pasting
 "Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
-Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+"Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'jsx' }
 Plug 'elzr/vim-json', { 'for': 'json' }
 "Plug 'Quramy/tsuquyomi', { 'for': 'typescript', 'do': 'npm install' }
@@ -72,5 +71,10 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'Shougo/vimproc.vim'
 Plug 'idanarye/vim-vebugger'
 Plug 'maksimr/vim-jsbeautify'
+Plug 'Valloric/YouCompleteMe'
+Plug 'maksimr/vim-jsbeautify'
+
+Plug 'Shougo/vimproc.vim'
+Plug 'idanarye/vim-vebugger'
 call plug#end()
 filetype plugin indent on

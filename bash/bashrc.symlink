@@ -9,8 +9,8 @@ fi
 
 
 # User specific aliases and functions
-alias ll="ls -lGhA --color"
-alias l='ls -lhGg --color'
+alias ll='ls -lGh'
+alias l='ls -lhGg'
 alias gs='git status'
 alias g='grep --color=tty -i -P'
 alias gr='grep -R --color=tty -i -P -n --exclude=*.{jpg,png,gif}'
