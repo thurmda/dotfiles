@@ -2,35 +2,51 @@
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
-if [ -f $HOME/.bashrc-local ]; then
-        . $HOME/.bashrc-local
-fi
-
 
 
 # User specific aliases and functions
-alias ll='ls -lGh'
+#shorts
 alias l='ls -lhGg'
+alias ll='ls -lGh'
+alias lm='ls -1'
 alias gs='git status'
 alias g='grep --color=tty -i -P'
 alias gr='grep -R --color=tty -i -P -n --exclude=*.{jpg,png,gif}'
+# apps
 alias chrome='open -a Google\ Chrome '
+alias can='open -a /Applications/Canary.app'
+alias vvim='/usr/local/bin/vim -u ~/.vim/vimrc-minimal '
+# boxes
 alias cudabox='ssh dv2024s.dev.ca1.sfmc.co'
+alias newcudabox='ssh gp0102m.dev.ca3.sfmc.co'
+alias devs='ssh dthurman@newnewdev.buddymedia.com'
+alias devb='ssh dthurman@www001.dev.us1.bm.co'
+alias dev='ssh dthurman@www001.dev.ca3.sfmc.co'
+alias jenk='ssh dthurman@jnk001.dev.us1.sfmc.co'
+alias devip='ssh dthurman@10.94.193.27'
+
 
 #env
 export TERM=xterm-256color
 export EDITOR=vim
-export GHTOKEN=d8f09417df5eb31fc30ca3be9595f8f65a336702
+
 	PATH="$HOME/.bin:$PATH"
-	PATH="./node/bin:$PATH"
+	PATH="$HOME/bin:$PATH"
 	PATH="$HOME/.dotfiles/bin:$PATH"
+	PATH="$HOME/hotness/phantomjs/bin:$PATH"
+	PATH="$HOME/code/Compair/bin:$PATH"
+	PATH="$HOME/hotness/mongo/mongodb-osx-x86_64-2.2.2/bin:$PATH"
+	PATH="/usr/local/bin:$PATH"
+	PATH="/usr/local/heroku/bin:$PATH"
+	PATH="./node/bin:$PATH"
 	PATH="./node_modules/.bin:$PATH"
 export PATH
 
 #scripts
-	[[ -s ~/.dotfiles/bin/git-completion.bash ]] && . ~/.dotfiles/bin/git-completion.bash #git completion
-	[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
-	
+[[ -s ~/.dotfiles/bin/git-completion.bash ]] && . ~/.dotfiles/bin/git-completion.bash #git completion
+[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
 DOTFILES="$HOME/.dotfiles"
 THEME="base16-monokai"
